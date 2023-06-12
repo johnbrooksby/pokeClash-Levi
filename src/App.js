@@ -15,7 +15,7 @@ function App() {
         <Route path='/pokemon' element={<Pokemon/>}/>
         <Route path='/team' element={<Team/>}/>
         <Route path='/rumble' element={<Rumble/>}/>
-        <Route path='/about' element={<About/>}/>
+        <Route path='/about/:name' element={<About/>}/>
       </Routes>
     
     </div>
