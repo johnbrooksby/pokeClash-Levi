@@ -13,6 +13,7 @@ const PokemonCard = ({ pokemon }) => {
       <img src={pokemon.img} alt="" />
       <h2>{pokemon.name}</h2>
       <button onClick={handleClick}>About</button>
+      <button>Add to Team</button>
     </div>
   );
 };

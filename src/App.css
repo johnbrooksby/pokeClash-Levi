@@ -26,7 +26,7 @@ body{
   width: 65%;
   justify-content: center;
   
-  gap: 10px;
+  gap: 30px;
   flex-wrap: wrap;
 }
 
@@ -39,10 +39,19 @@ body{
   box-sizing: border-box;
   box-shadow: 0px 3px 10px black;
   align-items: center;
-  gap: 10px;
+  gap: 30px;
   color: black;
   background-color: floralwhite;
   border-radius: 20px;
   border: 2px solid;
   border-color: floralwhite;
+}
+.poke-card img{
+ width: 60%;
+ 
+}
+.about{
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
 }
