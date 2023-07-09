@@ -7,7 +7,7 @@ const Header = () => {
       <header >
         <nav className="poke-header">
             <h1 className="header-title">PokeRumble</h1>
-<Link to={'/home'}>
+<Link to={'/'}>
             <button>Home</button>
 </Link>
 <Link to={'/pokemon'}>

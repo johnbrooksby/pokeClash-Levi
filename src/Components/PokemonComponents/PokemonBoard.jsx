@@ -2,7 +2,7 @@ import React from "react";
 import PokemonCard from "./PokemonCard";
 import { useState } from "react";
 
-const PokemonBoard = ({ pokemon }) => {
+const PokemonBoard = ({ pokemon}) => {
   const [search, setSearch] = useState("");
 
   const handleSearch = (e) => {
@@ -16,7 +16,7 @@ const PokemonBoard = ({ pokemon }) => {
     })
 
     .map((p, i) => {
-      return <PokemonCard key={i} pokemon={p} />;
+      return <PokemonCard key={i} pokemon={p}  />;
     });
 
   return (
