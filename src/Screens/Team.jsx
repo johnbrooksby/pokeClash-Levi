@@ -1,29 +1,43 @@
-import React from "react";
-import { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import GlobalContext from "../state/GlobalState";
 import axios from "axios";
 
 const Team = () => {
   const { team } = useContext(GlobalContext);
+  const [pokemonData, setPokemonData] = useState([]);
 
   useEffect(() => {
-    const newTeam = team.map((name) => {
-      axios
-        .get(` https://pokeapi.co/api/v2/pokemon/${name}`)
-        .then((res) => {
-          console.log(res.data);
-        })
-        .catch((err) => {
-          console.log(err);
+    const fetchPokemonData = async () => {
+      try {
+        const promises = team.map((name) =>
+          axios.get(`https://pokeapi.co/api/v2/pokemon/${name}`)
+        );
+        const responses = await Promise.all(promises);
+
+        const pokemonData = responses.map((res) => {
+          const { id, name, sprites } = res.data;
+          const img = sprites.front_default;
+          return { id, name, img };
         });
-    });
-  }, []);
+
+        setPokemonData(pokemonData);
+      } catch (error) {
+        console.log("Error fetching Pokémon data:", error);
+      }
+    };
+
+    fetchPokemonData();
+  }, [team]);
 
   return (
     <div>
-      {team.map((pokemon) => {
-        return <h1>{pokemon}</h1>;
-      })}
+      {pokemonData.map((pokemon) => (
+        
+        <div key={pokemon.id}>
+          <img src={pokemon.img}  />
+          <h1>{pokemon.name[0].toUpperCase() + pokemon.name.slice(1)}</h1>
+        </div>
+      ))}
     </div>
   );
 };
