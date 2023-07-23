@@ -20,23 +20,7 @@ const Pokemon = () => {
     });
   }, []);
 
-  // const addToTeam = (pokemon) => {
-  //   if (team.length >= 6) {
-  //     alert("You're team is full!");
-  //   }
-   
-  //   setTeam((prevTeam) => {
-  //     if (prevTeam.length < 6) {
-  //       return [...prevTeam, pokemon.name];
-  //     } else {
-  //       return prevTeam;
-  //     }
-  //   });
-  // };
-  // useEffect(() => {
-  //   console.log(team);
-  // }, [team]);
-
+ 
   return (
     <div>
       <PokemonBoard pokemon={pokemon} />

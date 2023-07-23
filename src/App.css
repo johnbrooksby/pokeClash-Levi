@@ -2,6 +2,10 @@ body{
   padding: 20px;
 }
 
+header{
+  background-color: blue;
+  color: white;
+}
 
 .poke-header{
   display: flex;

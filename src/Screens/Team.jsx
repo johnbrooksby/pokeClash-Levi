@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import GlobalContext from "../state/GlobalState";
 import axios from "axios";
+import TeamBoard from "../Components/PokemonTeam/TeamBoard";
 
 const Team = () => {
   const { team } = useContext(GlobalContext);
@@ -15,10 +16,11 @@ const Team = () => {
         const responses = await Promise.all(promises);
 
         const pokemonData = responses.map((res) => {
-          const { id, name, sprites } = res.data;
+          const { id, name, sprites, stats } = res.data;
           const img = sprites.front_default;
-          return { id, name, img };
+          return { id, name, img, stats };
         });
+        console.log(pokemonData)
 
         setPokemonData(pokemonData);
       } catch (error) {
@@ -31,13 +33,7 @@ const Team = () => {
 
   return (
     <div>
-      {pokemonData.map((pokemon) => (
-        
-        <div key={pokemon.id}>
-          <img src={pokemon.img}  />
-          <h1>{pokemon.name[0].toUpperCase() + pokemon.name.slice(1)}</h1>
-        </div>
-      ))}
+     <TeamBoard pokemonData={pokemonData}/>
     </div>
   );
 };

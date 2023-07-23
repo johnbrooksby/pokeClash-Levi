@@ -15,7 +15,7 @@ const PokemonCard = ({ pokemon }) => {
   return (
     <div className="poke-card">
       <img src={pokemon.img} alt="" />
-      <h2>{pokemon.name}</h2>
+      <h2>{pokemon.name[0].toUpperCase() + pokemon.name.slice(1)}</h2>
       <button onClick={handleClick}>About</button>
       <button onClick={() => addToTeam(pokemon)}>Add to Team</button>
     </div>
