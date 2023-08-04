@@ -1,9 +1,24 @@
-import React, { createContext, useState, useEffect } from "react";
+import React, { createContext, useState, useEffect, useReducer} from "react";
 
+const initialState = {
+  username: ''
+}
 const GlobalContext = createContext();
 
 const GlobalContextProvider = (props) => {
   const [team, setTeam] = useState([]);
+
+
+  const reducer = (state, action) => {
+    switch(action.type){
+      case "LOGIN" :
+        let {username} = action.payload
+        localStorage.setItem('username', username)
+        return {...state, username:username}
+    }
+  }
+
+  const [state, dispatch] = useReducer(reducer,initialState)
 
   const addToTeam = (pokemon) => {
     if (team.length >= 6) {
@@ -30,7 +45,7 @@ const GlobalContextProvider = (props) => {
   };
 
   return (
-    <GlobalContext.Provider value={contextValue}>
+    <GlobalContext.Provider  value={{state, dispatch}}>
       {props.children}
     </GlobalContext.Provider>
   );

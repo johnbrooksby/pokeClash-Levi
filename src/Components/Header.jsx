@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Header = () => {
+const Header = ({register, setRegister}) => {
   return (
     <div>
       <header >
@@ -20,6 +20,7 @@ const Header = () => {
             <button>Rumble</button>
     </Link>        
 
+<button>Logout</button>
 
         </nav>
       </header>
