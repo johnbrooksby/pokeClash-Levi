@@ -40,12 +40,14 @@ const GlobalContextProvider = (props) => {
   }, [team]);
 
   const contextValue = {
+    state,
+    dispatch,
     team,
     addToTeam,
   };
 
   return (
-    <GlobalContext.Provider  value={{state, dispatch}}>
+    <GlobalContext.Provider  value={contextValue}>
       {props.children}
     </GlobalContext.Provider>
   );
