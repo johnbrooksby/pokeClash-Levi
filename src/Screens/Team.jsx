@@ -6,6 +6,8 @@ import TeamBoard from "../Components/PokemonTeam/TeamBoard";
 const Team = () => {
   const { team } = useContext(GlobalContext);
   const [pokemonData, setPokemonData] = useState([]);
+  const [moves, setMoves] = useState([])
+  const [moveData, setMoveData] = useState([])
 
   useEffect(() => {
     const fetchPokemonData = async () => {
@@ -31,9 +33,40 @@ const Team = () => {
     fetchPokemonData();
   }, [team]);
 
+  useEffect(() =>{
+    axios.get("https://pokeapi.co/api/v2/move?limit=1000")
+    .then((res) =>{
+      
+      setMoves(res.data.results)
+    })
+
+  },[])
+
+  useEffect(() => {
+    const fetchMoveData = async () => {
+      try{
+        const promises = moves.map((move) => {
+          return axios.get(`https://pokeapi.co/api/v2/move/${move.name}`)
+        })
+        const responses = await Promise.all(promises)
+        
+        const pokemoveData = responses.map((res) => {
+        const {name, accuracy, pp, power} = res.data
+        return {name, accuracy, pp, power}
+        })
+        console.log(pokemoveData)
+        setMoveData(pokemoveData)
+      }
+      catch(err){
+        console.log(err)
+      }
+    }
+fetchMoveData()
+  },[moves])
+
   return (
     <div>
-     <TeamBoard pokemonData={pokemonData}/>
+     <TeamBoard pokemonData={pokemonData} moveData={moveData}/>
     </div>
   );
 };

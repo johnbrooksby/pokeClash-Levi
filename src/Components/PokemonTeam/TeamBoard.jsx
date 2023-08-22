@@ -1,10 +1,10 @@
 import React from 'react'
 import TeamCard from './TeamCard'
 
-const TeamBoard = ({pokemonData}) => {
+const TeamBoard = ({pokemonData, moveData}) => {
 
-const teamDisplay = pokemonData.map((pokemon)=> {
-    return <TeamCard pokemon={pokemon}/>
+const teamDisplay = pokemonData.map((pokemon, index)=> {
+    return <TeamCard key={index} pokemon={pokemon} move={moveData}/>
 })
 
 
