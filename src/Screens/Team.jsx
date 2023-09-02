@@ -22,9 +22,11 @@ const Team = () => {
           const img = sprites.front_default;
           return { id, name, img, stats };
         });
-        console.log(pokemonData)
+        console.log(team[4])
+        
 
         setPokemonData(pokemonData);
+
       } catch (error) {
         console.log("Error fetching Pokémon data:", error);
       }
@@ -53,14 +55,15 @@ const Team = () => {
         const pokemoveData = responses.map((res) => {
         const {name, accuracy, pp, power} = res.data
         return {name, accuracy, pp, power}
-        })
-        console.log(pokemoveData)
-        setMoveData(pokemoveData)
-      }
-      catch(err){
-        console.log(err)
-      }
+      })
+      
+      setMoveData(pokemoveData)
     }
+    catch(err){
+      console.log(err)
+    }
+  }
+ 
 fetchMoveData()
   },[moves])
 

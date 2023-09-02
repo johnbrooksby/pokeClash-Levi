@@ -6,7 +6,7 @@ const TeamCard = ({ pokemon, move }) => {
   }
 
   const randomIndices = [];
-  while (randomIndices.length < 4) {
+  while (randomIndices.length < 1) {
     const randomIndex = Math.floor(Math.random() * move.length);
     if (!randomIndices.includes(randomIndex)) {
       randomIndices.push(randomIndex);
@@ -17,9 +17,10 @@ const TeamCard = ({ pokemon, move }) => {
 
   return (
     <div className="poke-card">
-      <img src={pokemon.img} alt={pokemon.name} />
-      <h1>{pokemon.name[0].toUpperCase() + pokemon.name.slice(1)}</h1>
-      <h2>HP: {pokemon.stats[0].base_stat}</h2>
+      <img src={pokemon?.img} alt={pokemon?.name} />
+      <h1>{pokemon?.name[0].toUpperCase() + pokemon?.name.slice(1)}</h1>
+      <h2>HP: {pokemon?.stats[0]?.base_stat}</h2>
+      <h2>Power: {Number(pokemon?.stats[1].base_stat) + Number(move[randomIndices[0]].power)  }</h2>
 
       <div>
         {randomMoves.map((randomMove, index) => (

@@ -115,12 +115,16 @@ fetchMoveData()
 
   return (
     <div>
-      <h1>Computer Team</h1>
+      <h1>Opponent Team</h1>
       <TeamBoard pokemonData={computerData} moveData={moveData}/>
 
       <div>
         <h1>Player Team</h1>
         <TeamBoard pokemonData={teamData} moveData={moveData}/>
+      </div>
+
+      <div>
+        <button>Fight!</button>
       </div>
     </div>
   );
