@@ -6,7 +6,7 @@ const Header = ({register, setRegister}) => {
     <div>
       <header >
         <nav className="poke-header">
-            <h1 className="header-title">PokeRumble</h1>
+            <h1 className="header-title">PokemonClash</h1>
 <Link to={'/'}>
             <button>Home</button>
 </Link>
