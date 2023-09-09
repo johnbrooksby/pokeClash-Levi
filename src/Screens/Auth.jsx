@@ -32,7 +32,7 @@ const Auth = ({ register, setRegister }) => {
     .then((res)=> {
         console.log(res.data)
         dispatch({type:"LOGIN", payload: res.data})
-        setRegister(!register)
+        
     })
   };
 

@@ -2,6 +2,8 @@ import './App.css';
 import { Route,Routes } from 'react-router-dom';
 import { Navigate } from 'react-router-dom';
 import { useState } from 'react';
+import { useContext } from 'react';
+import GlobalContext from './state/GlobalState';
 import About from './Screens/About'
 import Pokemon from './Screens/Pokemon'
 import Team from './Screens/Team'
@@ -11,18 +13,19 @@ import Header from './Components/Header';
 import Auth from './Screens/Auth';
 
 function App() {
-  const [register, setRegister] = useState(true)
+  // const [register, setRegister] = useState(true)
+  const {state: {authorized}} = useContext(GlobalContext)
 
   
   return (
     <div className="App">
-      {!register ? <Header register={register} setRegister={setRegister}/> : null}
+      {authorized ? <Header /> : null}
       <Routes>
-        <Route path='/auth' element={register ? <Auth register={register} setRegister={setRegister}/> : <Navigate to={'/'}/>}/>
-        <Route path='/' element={!register ? <Home/> : <Navigate to={'/auth'}/>}/>
-        <Route path='/pokemon' element={!register ? <Pokemon/> : <Navigate to={'/auth'}/>}/>
-        <Route path='/team' element={!register ? <Team/> : <Navigate to={'/auth'}/>}/>
-        <Route path='/rumble' element={!register ? <Rumble/> : <Navigate to={'/auth'}/>}/>
+        <Route path='/auth' element={!authorized ? <Auth /> : <Navigate to={'/'}/>}/>
+        <Route path='/' element={authorized ? <Home/> : <Navigate to={'/auth'}/>}/>
+        <Route path='/pokemon' element={authorized ? <Pokemon/> : <Navigate to={'/auth'}/>}/>
+        <Route path='/team' element={authorized ? <Team/> : <Navigate to={'/auth'}/>}/>
+        <Route path='/rumble' element={authorized ? <Rumble/> : <Navigate to={'/auth'}/>}/>
         <Route path='/about/:name' element={<About/>}/>
       </Routes>
     

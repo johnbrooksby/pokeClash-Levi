@@ -1,27 +1,33 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import GlobalContext from "../state/GlobalState";
 
-const Header = ({register, setRegister}) => {
+const Header = ({ register, setRegister }) => {
+  const { state, dispatch } = useContext(GlobalContext);
+
+  const handleLogout = () => {
+    dispatch({ type: "LOGOUT" });
+  };
   return (
     <div>
-      <header >
+      <header>
         <nav className="poke-header">
-            <h1 className="header-title">PokemonClash</h1>
-<Link to={'/'}>
+          <h1 className="header-title">PokemonClash</h1>
+          <Link to={"/"}>
             <button>Home</button>
-</Link>
-<Link to={'/pokemon'}>
+          </Link>
+          <Link to={"/pokemon"}>
             <button>Pokemon</button>
-</Link>
-<Link to={'/team'}>
+          </Link>
+          <Link to={"/team"}>
             <button>Team</button>
-</Link>
-<Link to={'/rumble'}>
+          </Link>
+          <Link to={"/rumble"}>
             <button>Rumble</button>
-    </Link>        
+          </Link>
 
-<button>Logout</button>
-
+          <button onClick={handleLogout}>Logout</button>
         </nav>
       </header>
     </div>

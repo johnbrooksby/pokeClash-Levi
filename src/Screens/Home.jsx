@@ -7,7 +7,7 @@ const Home = () => {
   const {state} = useContext(GlobalContext)
   return (
     <div>
-      <h1>Welcome to PokeClash!, {state.username}!</h1>
+      <h1>Welcome to PokemonClash, {state.username}!</h1>
     </div>
   )
 }

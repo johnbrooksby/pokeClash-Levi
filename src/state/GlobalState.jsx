@@ -1,7 +1,8 @@
 import React, { createContext, useState, useEffect, useReducer} from "react";
 
 const initialState = {
-  username: ''
+  username: '',
+  authorized: null
 }
 const GlobalContext = createContext();
 
@@ -14,7 +15,11 @@ const GlobalContextProvider = (props) => {
       case "LOGIN" :
         let {username} = action.payload
         localStorage.setItem('username', username)
-        return {...state, username:username}
+        return {...state, username:username, authorized: true}
+
+      case "LOGOUT" :
+        localStorage.clear()
+        return{...state, username:null, authorized: false}
     }
   }
 
