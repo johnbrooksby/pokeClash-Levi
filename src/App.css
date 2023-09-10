@@ -1,12 +1,19 @@
-body{
+body {
   
+  background: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(157,233,148,1) 100%);
+  margin: 0; /* Remove default margin to cover the entire viewport */
+  height: 100vh; /* Set the height to cover the viewport vertically */
+ 
+ 
 }
+
 
 header{
   width: 100vw;
-  background-color: blue;
+ 
   color: white;
 }
+
 .charizard{
   z-index: 4;
   width: 300px;
@@ -20,9 +27,20 @@ header{
  align-items: center;
  width: 100vw;
  height: 100vh;
- background-color: black;
+
  z-index: 1;
  position: relative;
+}
+.authglass{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 200px;
+  border-radius: 20px;
+backdrop-filter: blur(2px) ;
+background-color: aliceblue;
+ 
 }
 .auth{
   display: flex;

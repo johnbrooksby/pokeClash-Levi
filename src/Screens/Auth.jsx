@@ -4,7 +4,7 @@ import GlobalContext from "../state/GlobalState";
 import axios from "axios";
 import Charizard from '../images/Charizard.png'
 
-const Auth = ({ register, setRegister }) => {
+const Auth = () => {
   const [username, setUserName] = useState("");
   const [login, setLogin] = useState("");
   const {state, dispatch} = useContext(GlobalContext)
@@ -40,6 +40,7 @@ const Auth = ({ register, setRegister }) => {
     <div>
     <div className="authBox">
       <h1>PokemonClash!</h1>
+      <div className="authglass">
     <div className="auth">
       <form className="registerForm" onSubmit={registerHandler}>
         <input
@@ -61,6 +62,7 @@ const Auth = ({ register, setRegister }) => {
         />
         <button>Let's Go!</button>
       </form>
+    </div>
     </div>
     <img src={Charizard} alt="" className="charizard"/>
     </div>

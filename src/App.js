@@ -13,7 +13,7 @@ import Header from './Components/Header';
 import Auth from './Screens/Auth';
 
 function App() {
-  // const [register, setRegister] = useState(true)
+  
   const {state: {authorized}} = useContext(GlobalContext)
 
   
