@@ -1,6 +1,6 @@
 body {
   
-  background: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(157,233,148,1) 100%);
+  background-color: white;
   margin: 0; /* Remove default margin to cover the entire viewport */
   height: 100vh; /* Set the height to cover the viewport vertically */
  
@@ -11,14 +11,29 @@ body {
 header{
   width: 100vw;
  
-  color: white;
+  color: black
 }
+.title{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 
+}
+.blastoise{
+  z-index: 4;
+  width: 300px;
+  height: 300px;
+  position: relative;
+  padding: 5px;
+}
 .charizard{
   z-index: 4;
   width: 300px;
   height: 300px;
   position: relative;
+  padding: 5px;
 }
 
 .authBox{
@@ -83,15 +98,16 @@ background-color: aliceblue;
   width: 300px;
   padding: 10px;
   box-sizing: border-box;
-  box-shadow: 0px 3px 10px black;
+ 
   align-items: center;
   color: black;
   background-color: floralwhite;
   border-radius: 20px;
-  border: 2px solid;
+  
   border-color: floralwhite;
-}
-.poke-card img{
+  box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+
+}  .poke-card img{
  width: 80%;
  
 }

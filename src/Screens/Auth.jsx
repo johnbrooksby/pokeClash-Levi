@@ -3,6 +3,7 @@ import { useState, useEffect,useContext } from "react";
 import GlobalContext from "../state/GlobalState";
 import axios from "axios";
 import Charizard from '../images/Charizard.png'
+import Blastoise from '../images/Blastoise.png'
 
 const Auth = () => {
   const [username, setUserName] = useState("");
@@ -37,9 +38,10 @@ const Auth = () => {
   };
 
   return (
-    <div>
-    <div className="authBox">
+    <div className="title">
       <h1>PokemonClash!</h1>
+    <div className="authBox">
+        <img src={Blastoise} alt="" className="blastoise" />
       <div className="authglass">
     <div className="auth">
       <form className="registerForm" onSubmit={registerHandler}>
