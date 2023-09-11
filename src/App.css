@@ -121,12 +121,11 @@ box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 
  
   align-items: center;
   color: black;
-  background-color: floralwhite;
+  background: rgb(255,0,0);
+  background: linear-gradient(180deg, rgba(255,0,0,1) 0%, rgba(255,255,255,1) 67%);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   border-radius: 20px;
-  
-  border-color: floralwhite;
-  box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
-
+  padding: 25px;
 }  .poke-card img{
  width: 80%;
  
@@ -135,4 +134,60 @@ box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 
   display: flex;
   justify-content: space-between;
   padding: 50px;
+}
+
+.welcomeBoxBox{
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 600px;
+}
+.welcomeBox{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  
+}
+.instructions{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+
+}
+.stepOne{
+  background: rgb(255,0,0);
+  background: linear-gradient(180deg, rgba(255,0,0,1) 0%, rgba(255,255,255,1) 67%);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  border-radius: 20px;
+  padding: 25px;
+}
+.stepTwo{
+  background: rgb(255,0,0);
+  background: linear-gradient(180deg, rgba(255,0,0,1) 0%, rgba(255,255,255,1) 67%);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  border-radius: 20px;
+  padding: 25px;
+}
+.stepThree{
+  background: rgb(255,0,0);
+  background: linear-gradient(180deg, rgba(255,0,0,1) 0%, rgba(255,255,255,1) 67%);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  border-radius: 20px;
+  padding: 25px;
+}
+
+.pokemonImages{
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+}
+
+.groudon{
+width: 300px;
+height: 300px;
+}
+.kyogre{
+width: 300px;
+height: 300px;
 }
