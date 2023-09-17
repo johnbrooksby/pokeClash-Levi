@@ -1,34 +1,33 @@
+*{
+  font-family: 'Play', sans-serif;
+}
+
 body {
-  
   background-color: white;
   margin: 0; /* Remove default margin to cover the entire viewport */
   height: 100vh; /* Set the height to cover the viewport vertically */
- 
- 
 }
 
-
-header{
+header {
   width: 100vw;
- 
-  color: black
+
+  color: black;
 }
-.title{
+.title {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-
 }
-.blastoise{
+.blastoise {
   z-index: 4;
   width: 300px;
   height: 300px;
   position: relative;
   padding: 5px;
 }
-.charizard{
+.charizard {
   z-index: 4;
   width: 300px;
   height: 300px;
@@ -36,158 +35,221 @@ header{
   padding: 5px;
 }
 
-.authBox{
- display: flex;
- justify-content: center;
- align-items: center;
- width: 100vw;
- height: 100vh;
+.authBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
 
- z-index: 1;
- position: relative;
+  z-index: 1;
+  position: relative;
 }
-.authglass{
+.authglass {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 500px;
   height: 200px;
   border-radius: 20px;
-backdrop-filter: blur(2px) ;
-background: rgb(255,0,0);
-background: linear-gradient(180deg, rgba(255,0,0,1) 0%, rgba(255,255,255,1) 67%);
-box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  backdrop-filter: blur(2px);
+  background: rgb(255, 0, 0);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 0, 0, 1) 0%,
+    rgba(255, 255, 255, 1) 67%
+  );
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
-.auth{
+.auth {
   display: flex;
   flex-direction: column;
-  
+
   align-items: center;
-  
 }
-@media screen and (max-width: 768px){
-  .authBox{
+.loginInput {
+  display: flex;
+  border-radius: 100px;
+}
+
+.usernameInput {
+  display: flex;
+  border-radius: 100px;
+}
+@media screen and (max-width: 768px) {
+  .authBox {
     display: flex;
     flex-direction: column;
   }
-  .authglass{
+  .authglass {
     width: 300px;
   }
 
-  .blastoise{
+  .blastoise {
     width: 200px;
     height: 200px;
   }
-  .charizard{
+  .charizard {
     width: 200px;
     height: 200px;
   }
 }
 
-.poke-header{
+.poke-header {
   display: flex;
   gap: 25px;
   align-items: baseline;
 }
 
-.header-title{
+.header-title {
   font-size: 50px;
 }
 
-
-.card-box{
+.card-box {
   display: flex;
   justify-content: center;
   width: 100vw;
 }
-.card-container{
+.card-container {
   display: flex;
   flex-wrap: wrap;
-  
+
   width: 65%;
   justify-content: center;
-  
+
   gap: 30px;
   flex-wrap: wrap;
 }
 
-.poke-card{
+.poke-card {
   display: flex;
   flex-direction: column;
   text-align: center;
   width: 300px;
   padding: 10px;
   box-sizing: border-box;
- 
+
   align-items: center;
   color: black;
-  background: rgb(255,0,0);
-  background: linear-gradient(180deg, rgba(255,0,0,1) 0%, rgba(255,255,255,1) 67%);
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  background: rgb(255, 0, 0);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 0, 0, 1) 0%,
+    rgba(255, 255, 255, 1) 67%
+  );
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   border-radius: 20px;
   padding: 25px;
-}  .poke-card img{
- width: 80%;
- 
 }
-.about{
+.poke-card img {
+  width: 80%;
+}
+.about {
   display: flex;
   justify-content: space-between;
   padding: 50px;
 }
 
-.welcomeBoxBox{
-  display: flex;
-  flex-direction: column;
-  width: 100vw;
-  height: 600px;
-}
-.welcomeBox{
+
+.welcomeBox {
   display: flex;
   flex-direction: column;
   text-align: center;
-  
 }
-.instructions{
+.instructions {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 25px;
+}
+.stepOne {
+  background: rgb(255, 0, 0);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 0, 0, 1) 0%,
+    rgba(255, 255, 255, 1) 67%
+  );
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  border-radius: 20px;
+  padding: 25px;
+}
+.stepTwo {
+  background: rgb(255, 0, 0);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 0, 0, 1) 0%,
+    rgba(255, 255, 255, 1) 67%
+  );
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  border-radius: 20px;
+  padding: 25px;
+}
+.stepThree {
+  background: rgb(255, 0, 0);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 0, 0, 1) 0%,
+    rgba(255, 255, 255, 1) 67%
+  );
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  border-radius: 20px;
+  padding: 25px;
+}
 
-}
-.stepOne{
-  background: rgb(255,0,0);
-  background: linear-gradient(180deg, rgba(255,0,0,1) 0%, rgba(255,255,255,1) 67%);
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-  border-radius: 20px;
-  padding: 25px;
-}
-.stepTwo{
-  background: rgb(255,0,0);
-  background: linear-gradient(180deg, rgba(255,0,0,1) 0%, rgba(255,255,255,1) 67%);
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-  border-radius: 20px;
-  padding: 25px;
-}
-.stepThree{
-  background: rgb(255,0,0);
-  background: linear-gradient(180deg, rgba(255,0,0,1) 0%, rgba(255,255,255,1) 67%);
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-  border-radius: 20px;
-  padding: 25px;
-}
-
-.pokemonImages{
+.pokemonImages {
   display: flex;
   justify-content: center;
   gap: 70px;
 }
 
-.groudon{
-width: 300px;
-height: 300px;
+.groudon {
+  width: 300px;
+  height: 300px;
 }
-.kyogre{
-width: 300px;
-height: 300px;
+.kyogre {
+  width: 300px;
+  height: 300px;
+}
+
+@media screen and (max-width: 768px) {
+  .welcomeBoxBox {
+   display: flex;
+   width: 730px;
+
+   
+  }
+  .welcomeBox {
+  }
+
+  .pokemonImages{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 730px;
+    height: auto;
+  }
+.instructions{
+  display: flex;
+  width: 300px;
+  height: auto;
+}
+  .groudon {
+    width: 300px;
+    height: 300px;
+  }
+  .kyogre {
+    width: 300px;
+    height: 300px;
+  }
 }

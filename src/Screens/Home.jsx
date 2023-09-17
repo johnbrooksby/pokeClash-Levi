@@ -7,8 +7,8 @@ import Kyogre from '../images/Kyogre.png'
 const Home = () => {
   const { state } = useContext(GlobalContext);
   return (
-    <div>
-      <div className="welcomeBoxBox">
+    <div className="welcomeBoxBox">
+      
         <div className="welcomeBox">
           <h1>Welcome to PokemonClash, {state.username}!</h1>
           <h2>A game of luck where power levels are randomized...</h2>
@@ -29,7 +29,7 @@ const Home = () => {
           <img src={Groundon} alt="" className="groudon" />
           </div>
         </div>
-      </div>
+     
     </div>
   );
 };
