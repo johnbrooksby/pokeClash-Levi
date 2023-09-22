@@ -13,6 +13,9 @@ header {
 
   color: black;
 }
+button{
+  border-radius: 10px;
+}
 .title {
   display: flex;
   flex-direction: column;
@@ -78,6 +81,12 @@ header {
   display: flex;
   border-radius: 100px;
 }
+
+.about-add{
+display: flex;
+flex-direction: column;
+gap: 10px;
+}
 @media screen and (max-width: 768px) {
   .authBox {
     display: flex;
@@ -99,7 +108,7 @@ header {
 
 .poke-header {
   display: flex;
-  gap: 25px;
+  gap: 15px;
   align-items: baseline;
 }
 
@@ -121,6 +130,15 @@ header {
 
   gap: 30px;
   flex-wrap: wrap;
+}
+
+@media screen and (max-width: 768px){
+  .card-box{
+    width: 750px;
+  }
+  .card-container{
+width: 750px;
+  }
 }
 
 .poke-card {
