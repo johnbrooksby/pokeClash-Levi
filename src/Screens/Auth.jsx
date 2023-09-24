@@ -44,6 +44,7 @@ const Auth = () => {
         <img src={Blastoise} alt="" className="blastoise" />
       <div className="authglass">
     <div className="auth">
+      <div>
       <form className="registerForm" onSubmit={registerHandler}>
         <input
           type="text"
@@ -54,6 +55,8 @@ const Auth = () => {
         />
         <button>Register</button>
       </form>
+      </div>
+      <div>
       <form action="loginForm" onSubmit={loginHandler}>
         <input
           type="text"
@@ -64,6 +67,7 @@ const Auth = () => {
         />
         <button>Let's Go!</button>
       </form>
+      </div>
     </div>
     </div>
     <img src={Charizard} alt="" className="charizard"/>

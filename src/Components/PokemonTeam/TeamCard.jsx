@@ -1,6 +1,15 @@
 import React from "react";
+import {TiDeleteOutline} from 'react-icons/ti'
+import { useContext } from "react";
+import GlobalContext from "../../state/GlobalState";
+
+
 
 const TeamCard = ({ pokemon, move }) => {
+
+  const {removeFromTeam} = useContext(GlobalContext)
+
+
   if (!move || move.length === 0) {
     return <div>Loading...</div>;
   }
@@ -23,10 +32,14 @@ const TeamCard = ({ pokemon, move }) => {
       <h2>Power: {Number(pokemon?.stats[1].base_stat) + Number(move[randomIndices[0]].power)  }</h2>
 
       <div>
+        <h3>Special Move:</h3>
         {randomMoves.map((randomMove, index) => (
           <button key={index}>{randomMove}</button>
+        
         ))}
+        
       </div>
+     <TiDeleteOutline size={30}  onClick={() => removeFromTeam(pokemon)}/>
     </div>
   );
 };

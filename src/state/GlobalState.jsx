@@ -40,6 +40,15 @@ const GlobalContextProvider = (props) => {
     });
   };
 
+  const removeFromTeam = (pokemon) => {
+    console.log("Removing:", pokemon.name); // Debugging line
+    setTeam((prevTeam) => {
+      const newTeam = prevTeam.filter((name) => name !== pokemon.name);
+      console.log(newTeam); // Debugging line
+      return newTeam;
+    });
+  };
+  
   useEffect(() => {
     console.log(team);
   }, [team]);
@@ -49,6 +58,7 @@ const GlobalContextProvider = (props) => {
     dispatch,
     team,
     addToTeam,
+    removeFromTeam
   };
 
   return (
