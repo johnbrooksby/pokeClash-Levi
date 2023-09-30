@@ -21,7 +21,9 @@ const PokemonBoard = ({ pokemon}) => {
 
   return (
     <div>
-      <input type="text" placeholder="Search Pokemon" onChange={handleSearch} />
+      <div className="search-bar">
+      <input type="text" placeholder="Search Pokemon" onChange={handleSearch} className="search-bar" />
+      </div>
       <div className="card-box">
         <div className="card-container">{pokeDisplay}</div>
       </div>

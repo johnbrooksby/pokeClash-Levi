@@ -1,10 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useContext } from "react";
-import GlobalContext from "../state/GlobalState";
+import { useContext,useState } from "react";
 
-const Header = ({ register, setRegister }) => {
+import GlobalContext from "../state/GlobalState";
+import Pokeball from '../images/Pokeball.png'
+
+const Header = () => {
   const { state, dispatch } = useContext(GlobalContext);
+
+
+  const [hidden, setHidden] = useState(true)
+  const [clicked, setClicked] = useState(false)
+  
 
   const handleLogout = () => {
     dispatch({ type: "LOGOUT" });
@@ -27,7 +34,7 @@ const Header = ({ register, setRegister }) => {
             <button>Rumble</button>
           </Link>
 
-          <button onClick={handleLogout}>Logout</button>
+          <button onClick={handleLogout} className="logout">Logout</button>
         </nav>
       </header>
     </div>
