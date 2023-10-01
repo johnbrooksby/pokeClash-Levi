@@ -13,6 +13,9 @@ header {
   padding: 25px;
   color: black;
 }
+
+
+
 button{
   border-radius: 10px;
 }
@@ -121,6 +124,48 @@ gap: 10px;
     display: flex;
     justify-content: center;
   }
+  header{
+    display:none
+  }
+
+.mobile-navbox{
+ 
+    display: flex;
+    justify-content: center;
+   align-items: center;
+    width: 700px;
+    height: 60px; /* Set your preferred height */
+    position: fixed;
+    gap: 50px;
+    bottom: 0;
+    left: 0;
+    z-index: 999; /* Ensure it's above other content */
+    border-radius: 25px;
+}
+
+  .mobile-nav {
+    background-color: blanchedalmond;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 60px; /* Set your preferred height */
+    position: fixed;
+    gap: 50px;
+    
+    z-index: 999; /* Ensure it's above other content */
+    border-radius: 25px;
+  }
+}
+.navIMG{
+width: 50px;
+}
+  
+@media screen and (min-width: 768px) {
+  footer{
+    display:none
+  }
+  
 }
 
 .poke-header {
@@ -244,7 +289,7 @@ width: 700px;
 .pokemonImages {
   display: flex;
   justify-content: center;
-  gap: 70px;
+  gap: 50px;
 }
 
 .groudon {

@@ -11,6 +11,7 @@ import Rumble from './Screens/Rumble'
 import Home from './Screens/Home';
 import Header from './Components/Header';
 import Auth from './Screens/Auth';
+import Footer from './Components/Footer';
 
 function App() {
   
@@ -28,6 +29,7 @@ function App() {
         <Route path='/rumble' element={authorized ? <Rumble/> : <Navigate to={'/auth'}/>}/>
         <Route path='/about/:name' element={<About/>}/>
       </Routes>
+      {authorized ? <Footer /> : null}
     
     </div>
   );
