@@ -1,11 +1,13 @@
 * {
   font-family: "Play", sans-serif;
+  
 }
 
 body {
   background-color: white;
   margin: 0; /* Remove default margin to cover the entire viewport */
   height: 100vh; /* Set the height to cover the viewport vertically */
+  padding: 25px;
 }
 
 header {
