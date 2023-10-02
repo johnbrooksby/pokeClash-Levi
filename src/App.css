@@ -1,5 +1,5 @@
-*{
-  font-family: 'Play', sans-serif;
+* {
+  font-family: "Play", sans-serif;
 }
 
 body {
@@ -14,12 +14,10 @@ header {
   color: black;
 }
 
-
-
-button{
+button {
   border-radius: 10px;
 }
-.logout{
+.logout {
   background-color: rgb(255, 0, 0);
 }
 .title {
@@ -43,7 +41,6 @@ button{
   position: relative;
   padding: 5px;
 }
-
 
 .authBox {
   display: flex;
@@ -89,20 +86,23 @@ button{
   border-radius: 100px;
 }
 
-.about-add{
-display: flex;
-flex-direction: column;
-gap: 10px;
+.about-add {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.search-bar{
+.search-bar {
   display: flex;
   justify-content: center;
   margin-bottom: 1em;
   border-radius: 50px;
-  
 }
 @media screen and (max-width: 768px) {
+
+  .spacer{
+    height: 60px;
+  }
   .authBox {
     display: flex;
     flex-direction: column;
@@ -120,52 +120,50 @@ gap: 10px;
     height: 200px;
   }
 
-  .search-bar{
+  .search-bar {
     display: flex;
     justify-content: center;
   }
-  header{
-    display:none
+  header {
+    display: none;
   }
 
-.mobile-navbox{
- 
+  .mobile-navbox {
     display: flex;
     justify-content: center;
-   align-items: center;
-    width: 700px;
+    align-items: center;
+    width: 100%;
     height: 60px; /* Set your preferred height */
     position: fixed;
     gap: 50px;
     bottom: 0;
     left: 0;
-    z-index: 999; /* Ensure it's above other content */
+   
     border-radius: 25px;
-}
+  }
 
   .mobile-nav {
     background-color: blanchedalmond;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 500px;
+    width: 100%;
     height: 60px; /* Set your preferred height */
     position: fixed;
     gap: 50px;
+
     
-    z-index: 999; /* Ensure it's above other content */
     border-radius: 25px;
   }
 }
-.navIMG{
-width: 50px;
+.navIMG {
+  width: 50px;
 }
-  
+
 @media screen and (min-width: 768px) {
-  footer{
-    display:none
+  footer {
+    display: none;
   }
-  
 }
 
 .poke-header {
@@ -194,12 +192,12 @@ width: 50px;
   flex-wrap: wrap;
 }
 
-@media screen and (max-width: 768px){
-  .card-box{
-    width: 700px;
+@media screen and (max-width: 768px) {
+  .card-box {
+    width: 100%;
   }
-  .card-container{
-width: 700px;
+  .card-container {
+    width: 100%;
   }
 }
 
@@ -208,7 +206,7 @@ width: 700px;
   flex-direction: column;
   text-align: center;
   width: 300px;
-  
+
   box-sizing: border-box;
 
   align-items: center;
@@ -233,7 +231,6 @@ width: 700px;
   justify-content: space-between;
   padding: 50px;
 }
-
 
 .welcomeBox {
   display: flex;
@@ -303,27 +300,25 @@ width: 700px;
 
 @media screen and (max-width: 768px) {
   .welcomeBoxBox {
-   display: flex;
-   width: 730px;
-
-   
+    display: flex;
+    width: 100%;
   }
   .welcomeBox {
   }
 
-  .pokemonImages{
+  .pokemonImages {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 730px;
+    width: 100%;
     height: auto;
   }
-.instructions{
-  display: flex;
-  width: 300px;
-  height: auto;
-}
+  .instructions {
+    display: flex;
+    width: 50%;
+    height: auto;
+  }
   .groudon {
     width: 300px;
     height: 300px;

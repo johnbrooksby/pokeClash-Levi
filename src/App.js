@@ -29,6 +29,7 @@ function App() {
         <Route path='/rumble' element={authorized ? <Rumble/> : <Navigate to={'/auth'}/>}/>
         <Route path='/about/:name' element={<About/>}/>
       </Routes>
+    <div className='spacer'></div>
       {authorized ? <Footer /> : null}
     
     </div>
