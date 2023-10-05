@@ -119,21 +119,16 @@ const Rumble = () => {
     fetchPokemonData();
   }, [team]);
 
-  useEffect(() => {
-    // Calculate total power based on the moves of each Pokémon
-    let calculatedTotalPower = 0;
+  const handleFight = () => {
+    const randomNumber = Math.floor(Math.random() * 100) + 1;
 
-    teamData.forEach((pokemon) => {
-      pokemon.moves.forEach((move) => {
-        const moveInfo = moveData.find((data) => data.name === move);
-        if (moveInfo) {
-          calculatedTotalPower += moveInfo.power;
-        }
-      });
-    });
-
-    setTotalPower(calculatedTotalPower);
-  }, [teamData, moveData]);
+    if(randomNumber % 2 === 0) {
+      console.log("YOU WIN")
+    }else{
+      console.log("LOSER")
+    }
+  
+  }
 
   return (
     <div>
@@ -146,8 +141,8 @@ const Rumble = () => {
       </div>
 
       <div>
-        <h1>Total Power: {totalPower}</h1>
-        <button>Fight!</button>
+        
+        <button onClick={handleFight}>Fight!</button>
       </div>
     </div>
   );

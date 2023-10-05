@@ -153,7 +153,11 @@ button {
     height: 60px; /* Set your preferred height */
     position: fixed;
     gap: 50px;
-
+    background: linear-gradient(
+      180deg,
+      rgba(255, 0, 0, 1) 0%,
+      rgba(255, 255, 255, 1) 67%
+    );
     
     border-radius: 25px;
   }
