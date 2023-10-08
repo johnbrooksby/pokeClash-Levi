@@ -23,7 +23,7 @@ const Home = () => {
               <h3>2. View your team in the team tab</h3>
             </div>
             <div className="stepThree">
-              <h3>3. Battle to see who has the highest team power!</h3>
+              <h3>3. Battle to see what team will win!</h3>
             </div>
           </div>
           <img src={Groundon} alt="" className="groudon" />

@@ -123,8 +123,10 @@ const Rumble = () => {
     const randomNumber = Math.floor(Math.random() * 100) + 1;
 
     if(randomNumber % 2 === 0) {
+      alert('You Win')
       console.log("YOU WIN")
     }else{
+      alert('You Lost')
       console.log("LOSER")
     }
   
@@ -140,9 +142,9 @@ const Rumble = () => {
         <TeamBoard pokemonData={teamData} moveData={moveData} />
       </div>
 
-      <div>
+      <div className="fightbtn-con">
         
-        <button onClick={handleFight}>Fight!</button>
+        <button className="fightbtn" onClick={handleFight}>Fight!</button>
       </div>
     </div>
   );

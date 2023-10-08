@@ -7,11 +7,12 @@ body {
   background-color: white;
   margin: 0; /* Remove default margin to cover the entire viewport */
   height: 100vh; /* Set the height to cover the viewport vertically */
-  padding: 25px;
+
+ 
 }
 
 header {
-  width: 100vw;
+  width: 100%;
   padding: 25px;
   color: black;
 }
@@ -185,7 +186,7 @@ button {
 .card-box {
   display: flex;
   justify-content: center;
-  width: 100vw;
+  width: 100%;
 }
 .card-container {
   display: flex;
@@ -204,6 +205,7 @@ button {
   }
   .card-container {
     width: 100%;
+    padding: 25px;
   }
 }
 
@@ -211,7 +213,7 @@ button {
   display: flex;
   flex-direction: column;
   text-align: center;
-  width: 300px;
+  width: 100%;
 
   box-sizing: border-box;
 
@@ -333,4 +335,21 @@ button {
     width: 300px;
     height: 300px;
   }
+}
+
+.fightbtn-con{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+ 
+}
+.fightbtn{
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 0, 0, 1) 0%,
+    rgba(255, 255, 255, 1) 67%
+  );
 }
