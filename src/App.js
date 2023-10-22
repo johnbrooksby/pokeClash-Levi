@@ -12,6 +12,7 @@ import Home from './Screens/Home';
 import Header from './Components/Header';
 import Auth from './Screens/Auth';
 import Footer from './Components/Footer';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   
