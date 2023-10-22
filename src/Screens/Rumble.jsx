@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import GlobalContext from "../state/GlobalState";
 import TeamBoard from "../Components/PokemonTeam/TeamBoard";
+import FightModal from "../Components/modal";
 
 const Rumble = () => {
   const [computer, setComputer] = useState([]);
@@ -143,8 +144,9 @@ const Rumble = () => {
       </div>
 
       <div className="fightbtn-con">
+        <FightModal />
         
-        <button className="fightbtn" onClick={handleFight}>Fight!</button>
+       
       </div>
     </div>
   );
