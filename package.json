@@ -1,6 +1,7 @@
 {
   "name": "poke-rumble",
   "version": "0.1.0",
+  "proxy": "http://localhost:5050",
   "private": true,
   "dependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",

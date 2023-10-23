@@ -17,7 +17,7 @@ const Auth = () => {
       username: username,
     };
 
-    axios.post("http://localhost:5050/register", myUser).then((res) => {
+    axios.post("/register", myUser).then((res) => {
       console.log(res.data);
      
     });
@@ -29,7 +29,7 @@ const Auth = () => {
     const loginUser = {
         login: login
     }
-    axios.post('http://localhost:5050/login', loginUser)
+    axios.post('/login', loginUser)
     .then((res)=> {
         console.log(res.data)
         dispatch({type:"LOGIN", payload: res.data})
