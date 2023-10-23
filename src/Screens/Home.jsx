@@ -9,6 +9,7 @@ const Home = () => {
   return (
     <div className="welcomeBoxBox">
       
+      
         <div className="welcomeBox">
           <h1>Welcome to PokemonClash, {state.username}!</h1>
           <h2>A game of luck where power levels are randomized...</h2>
