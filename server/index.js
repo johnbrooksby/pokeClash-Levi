@@ -4,11 +4,12 @@ const cors = require('cors')
 const app = express()
 const {sequelize} = require('./util/database')
 const {PORT} = process.env
+const path = require('path')
 const {register,login} = require('./controller/Authentication')
 app.use(express.json())
 app.use(cors())
 
-app.use(express.static(path.resolve(__dirname, "../build")))
+app.use(express.static(path.resolve(__dirname, "/../../build")))
 
 app.post('/register',register)
 app.post('/login', login)
